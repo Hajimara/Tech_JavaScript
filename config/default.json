@@ -1,0 +1,25 @@
+{
+    "host": "localhost",
+    "port": 3030,
+    "mongodb": "mongodb://localhost:27017/canvas",
+    "templates": "../templates",
+  
+    "authentication": {
+      "secret": "&fBr|7WdjK$H+dmILDEs",
+      "entity": "user",
+      "service": "users",
+      "authStrategies": ["jwt", "local"],
+      "jwtOptions": {
+        "header": { "typ": "access" },
+        "audience": "http://localhost:3030/",
+        "issuer": "feathers",
+        "algorithm": "HS256",
+        "expiresIn": "1d"
+      },
+      "local": {
+        "usernameField": "email",
+        "passwordField": "password"
+      }
+    }
+  }
+  
